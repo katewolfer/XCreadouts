@@ -63,7 +63,7 @@ At the moment, the plots are coloured automatically by day, and contain the full
 The development version can be obtained from GitHub:
 
 # Install devtools
-`if(!require("devtools")) install.packages("devtools")`
-`devtools::install_github("katewolfer/sXCreadouts", ref="master")`
-
+`if(!require("devtools")) install.packages("devtools")`  
+`devtools::install_github("katewolfer/sXCreadouts", ref="master")`  
+  
 Hope you find it useful!
