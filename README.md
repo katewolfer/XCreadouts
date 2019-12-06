@@ -26,8 +26,8 @@ Open the runXCreadouts file, and run the whole script. You will then be prompted
 The longer the date range, the more the function will struggle to produce the plot, so consider how much information you really need.
 I will adjust so the last date can be other than the most recent file soon.
 
-Prompt:
-`<addr>` Enter required date as year-month-day, e.g. 2019-11-11: 2019-12-01
+Prompt:  
+<addr> Enter required date as year-month-day, e.g. 2019-11-11: 2019-12-01
 
 Which will then return all the column names of the data contained within the logs like so:
 
