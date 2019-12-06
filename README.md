@@ -22,7 +22,7 @@ You'll need to locate the logfiles on your instrument. For Exactive instruments,
 ### How to use XCreadouts
 Download the R folder in the repo for now - it will be made into an R package/Python version/standalone exe as soon as I get round to it.
 
-Open the runXCreadouts file, and run the whole script. You will then be prompted to input the furthest date back in time that you want to check, so if you enter today's date (e.g. 2019-12-06) then it will plot all the logs from today only; if you input e.g. 2019-12-06 then it will produce everything from the last year.
+Open the `runXCreadouts` file, and run the whole script. You will then be prompted to input the furthest date back in time that you want to check, so if you enter today's date (e.g. 2019-12-06) then it will plot all the logs from today only; if you input e.g. 2019-12-06 then it will produce everything from the last year.
 The longer the date range, the more the function will struggle to produce the plot, so consider how much information you really need.
 I will adjust so the last date can be other than the most recent file soon.
 
