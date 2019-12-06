@@ -10,13 +10,13 @@ In order to be most use, XCreadouts is meant to be agnostic to what comes out of
 The functions still need testing for other Thermo instruments. I'm totally happy to incorporate testing for this, drop me a mail if you'd like it incorporated.
 
 On our instrument, the available readbacks include: 
--instrument up-time
--turbomolecular readbacks (°C, mBar, voltages, currents, including motors and bearings)
--ambient temperature and humidity
--capillary temperature
--various other instrument temperatures like heatsinks, the capillary, analyzer and quad detector
--various other instrument voltages like flatapoles and C-trap
-
+- instrument up-time  
+- turbomolecular readbacks (°C, mBar, voltages, currents, including motors and bearings)  
+- ambient temperature and humidity  
+- capillary temperature  
+- various other instrument temperatures like heatsinks, the capillary, analyzer and quad detector  
+- various other instrument voltages like flatapoles and C-trap  
+  
 You'll need to locate the logfiles on your instrument. For Exactive instruments, these should be on your instrument PC in C:/Xcalibur/system/Exactive/log (substitute the instrument name as appropriate, make sure you can manually locate the log folder first).
            
 ### How to use XCreadouts
