@@ -60,4 +60,10 @@ At the moment, the plots are coloured automatically by day, and contain the full
 
 ![Example image of ambient temp readout](https://github.com/katewolfer/XCreadouts/blob/master/examples/test%20ambient.png)  
 
+The development version can be obtained from GitHub:
+
+# Install devtools
+`if(!require("devtools")) install.packages("devtools")`
+`devtools::install_github("katewolfer/sXCreadouts", ref="master")`
+
 Hope you find it useful!
