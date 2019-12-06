@@ -26,15 +26,8 @@ XCinteractive <- function(getLog, i){
   colnames(subsetData) <- c("Date", colnames(getLog)[i])
 
   # get date as colour
-
   getDateFactor <- as.factor(getDateCheck)
   subsetData$day <- getDateFactor
-
-
-  # colour palette for random sampling
-  # getCols <- c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072",
-  #              "#80B1D3", "#FDB462", "#B3DE69", "#FCCDE5")
-  # selectCol <- sample(getCols,1)
 
   # construct plot
   plotTitle <- paste(colnames(getLog)[i], ", ",
@@ -46,16 +39,11 @@ XCinteractive <- function(getLog, i){
                type = 'scatter', size = 3,
                color = subsetData$day,
                mode = 'markers') %>%
-               #colorscale='Viridis')
 
     layout(title = plotTitle,
            yaxis = list(title = paste(colnames(subsetData)[2])),
            xaxis = list(title = "time/date", tickangle = 270))
 
-  # Create a shareable link to your chart
-  # Set up API credentials: https://plot.ly/r/getting-started
-  #chart_link = api_create(p, filename="test_vacuum_plot")
-  #chart_link
 
   return(p)
 }

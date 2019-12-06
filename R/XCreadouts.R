@@ -8,8 +8,17 @@
 
 XCreadouts <- function(){
 
-  # pull out the data to be parsed
-  setwd("C:/Xcalibur/system/Exactive/log")
+  # find the logfile directory and set to work out of here
+  logDir <- "C:/Xcalibur/system/Exactive/log"
+  if (file.exists(logDir)){
+    cat("Exactive log folder found!")
+  } else {
+    cat("No Exactive log folder exists - please check the folder location!")
+    userDir <- readline(prompt="Enter the address of the log file location, using the format e.g. C:/Xcalibur/system/Exactive/log")
+    logDir = userDir
+  }
+
+  setwd(logDir)
 
   # create the directory for readback plots in the log folder
   if (file.exists("C:/Xcalibur/system/Exactive/log/Readback plots")){
