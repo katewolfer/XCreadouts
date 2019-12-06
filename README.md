@@ -57,9 +57,11 @@ Then enter the column number, e.g.:
 The plot will then be produced automatically, and stored in a folder called "Readback plots" inside your instrument log folder as a web-browser viewable HTML file. You can then save this as a PNG file in the browser. I will add in functionality to produce and save a high-res JPEG file soon.  
   
 At the moment, the plots are coloured automatically by day, and contain the full date stamp on the X-axis, plus rounded values on the Y-axis - like this:  
-
+  
+  
 ![Example image of ambient temp readout](https://github.com/katewolfer/XCreadouts/blob/master/examples/test%20ambient.png)  
-
+  
+  
 The development version can be obtained from GitHub:
 
 ### Install devtools
