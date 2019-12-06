@@ -1,0 +1,11 @@
+Package: XCreadouts
+Type: Package
+Title: Plots for Thermo Orbitrap instrument logs
+Version: 0.1.0
+Author: Kate Wolfer
+Maintainer: Kate Wolfer <kate.wolfer@unibas.ch>
+Description: A small package for keeping an eye on your Thermo Orbitrap instrument temperatures and vacuums 
+Imports: plotly, htmlwidgets
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
