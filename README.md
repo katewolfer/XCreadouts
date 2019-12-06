@@ -27,29 +27,35 @@ The longer the date range, the more the function will struggle to produce the pl
 I will adjust so the last date can be other than the most recent file soon.
 
 Prompt:  
-<addr> Enter required date as year-month-day, e.g. 2019-11-11: 2019-12-01
+`Enter required date as year-month-day, e.g. 2019-11-11:`   
+Then enter the date, e.g.:   
+`2019-12-01`
 
 Which will then return all the column names of the data contained within the logs like so:
 
- [1] "Time [sec]"                                      
- [2] "Date"                                            
- [3] "Up-Time [days]"                                  
- [4] "Vacuum 1 (HV) [mbar]"                            
- [5] "Vacuum 2 (UHV) [mbar]"                           
- [6] "Vacuum 3 (Fore) [mbar]"                          
- [7] "Vacuum 4/humidity [mbar]"                        
- [8] "TURBO1_TEMP_BEARING_R [°C]"
+ `[1] "Time [sec]"`                                     
+ `[2] "Date"`                                         
+ `[3] "Up-Time [days]"`                                
+ `[4] "Vacuum 1 (HV) [mbar]"`                            
+ `[5] "Vacuum 2 (UHV) [mbar]"`                           
+ `[6] "Vacuum 3 (Fore) [mbar]"`                          
+ `[7] "Vacuum 4/humidity [mbar]"`                        
+ `[8] "TURBO1_TEMP_BEARING_R [°C]"`
  ...
  
  You will then be prompted to input the number of the readback type for the plot. So, if you wanted to plot [4] "Vacuum 1 (HV) [mbar]":
  
- 44] "Analyzer temp sensor (filtered) [°C]"            
-[45] "Analyzer temperature (with delay model) [°C]"    
-[46] "CEPS Peltier temperature sensor [°C]"            
-[47] "Quad Detector Temperature [°C]"                  
-[48] ""                                                
-Enter required column: 4
+`[44] "Analyzer temp sensor (filtered) [°C]"`            
+`[45] "Analyzer temperature (with delay model) [°C]"`    
+`[46] "CEPS Peltier temperature sensor [°C]"`            
+`[47] "Quad Detector Temperature [°C]"`                  
+`[48] ""                                                
+`Enter required column:` 4
 
-The plot will then be produced automatically, and stored in a folder called "Readback plots" inside your instrument log folder as a web-browser viewable HTML file. You can then save this as a PNG file in the browser. I will add in functionality to produce and save a high-res JPEG file soon.
+The plot will then be produced automatically, and stored in a folder called "Readback plots" inside your instrument log folder as a web-browser viewable HTML file. You can then save this as a PNG file in the browser. I will add in functionality to produce and save a high-res JPEG file soon.  
+  
+At the moment, the plots are coloured automatically by day, and contain the full date stamp on the X-axis, plus rounded values on the Y-axis - like this:  
 
-![Example image of ambient temp readout](https://github.com/katewolfer/XCreadouts/blob/master/examples/test%20ambient.png)
+![Example image of ambient temp readout](https://github.com/katewolfer/XCreadouts/blob/master/examples/test%20ambient.png)  
+
+Hope you find it useful!
