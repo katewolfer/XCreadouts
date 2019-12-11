@@ -6,6 +6,13 @@
 ## v 1.0, 05 Dec 2019                                   ##
 ##########################################################
 
+#' Generate ggplot2 and (interactive) plotly figures for Thermo Orbitrap
+#' readouts, usually stored in log folder under Xcalibur
+#'
+#' @return \code{html} of measurements user-selected readback. Variables 'DATE'
+#' or NA are not plotted.
+
+
 XCreadouts <- function(){
 
   # find the logfile directory and set to work out of here
@@ -34,6 +41,7 @@ XCreadouts <- function(){
   dateRequired = as.Date(userDate)
 
   # list the files in the directory that have temperature in the filename
+  # currently hard coded - may need to be adjusted for other instrument types
   temperatureFiles <- list.files(path = getwd(),
                                  pattern = "InstrumentTemperature")
 
@@ -41,7 +49,7 @@ XCreadouts <- function(){
   adjustTempFiles <- trimws(sub("^[^20]*", "", temperatureFiles))
   fullDateList <- as.Date(sub(".log", "", adjustTempFiles))
 
-  # match the date range
+  # match the date range and ensure user input reflects available data
   findDateMatch <- findInterval(dateRequired, fullDateList)
   if (findDateMatch > 0){
   } else {
@@ -63,8 +71,10 @@ XCreadouts <- function(){
   userSelect <- readline(prompt="Enter required column: ")
   userSelect <- as.numeric(userSelect)
 
-  # make plots and export interactive plot
+  # make static (ggplot2) figure
   makeGG <- XCplot(getLog, userSelect)
+
+  # make interactive (plotly) figure and export as HTML file with datestamp
   makePlotly <- XCinteractive(getLog, userSelect)
   newsystime <- format(Sys.time(),"%Y-%m-%d %H.%M.%S")
   setwd(plotSaveDir)
