@@ -20,7 +20,7 @@ On our instrument, the available readbacks include:
 You'll need to locate the logfiles on your instrument. For Exactive instruments, these should be on your instrument PC in C:/Xcalibur/system/Exactive/log (substitute the instrument name as appropriate, make sure you can manually locate the log folder first).
            
 ### How to use XCreadouts
-Download the R folder in the repo for now - it will be made into an R package/Python version/standalone exe as soon as I get round to it.
+Download the R folder into your working directory.
 
 Open the `runXCreadouts` file, and run the whole script. You will then be prompted to input the furthest date back in time that you want to check, so if you enter today's date (e.g. 2019-12-06) then it will plot all the logs from today only; if you input e.g. 2019-12-06 then it will produce everything from the last year.
 The longer the date range, the more the function will struggle to produce the plot, so consider how much information you really need.
@@ -67,5 +67,3 @@ The development version can be obtained from GitHub:
 ### Install devtools
 `if(!require("devtools")) install.packages("devtools")`  
 `devtools::install_github("katewolfer/sXCreadouts", ref="master")`  
-  
-Hope you find it useful!
